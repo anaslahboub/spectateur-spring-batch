@@ -1,0 +1,307 @@
+<spectators>
+    <spectatorEntry>
+        <spectatorId>SPX10001</spectatorId>
+        <matchId>MCH01</matchId>
+        <entryTime>2025-07-05T17:02:10</entryTime>
+        <gate>Gate A1</gate>
+        <ticketNumber>TK-10001-AGD</ticketNumber>
+        <age>22</age>
+        <nationality>Maroc</nationality>
+        <ticketType>STANDARD</ticketType>
+        <seatLocation>
+            <tribune>Nord</tribune>
+            <bloc>A</bloc>
+            <rang>3</rang>
+            <siege>15</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10002</spectatorId>
+        <matchId>MCH01</matchId>
+        <entryTime>2025-07-05T17:15:00</entryTime>
+        <gate>Gate A2</gate>
+        <ticketNumber>TK-10002-AGD</ticketNumber>
+        <age>30</age>
+        <nationality>Sénégal</nationality>
+        <ticketType>STANDARD</ticketType>
+        <seatLocation>
+            <tribune>Est</tribune>
+            <bloc>C</bloc>
+            <rang>4</rang>
+            <siege>12</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10003</spectatorId>
+        <matchId>MCH02</matchId>
+        <entryTime>2025-07-06T18:40:22</entryTime>
+        <gate>Gate B1</gate>
+        <ticketNumber>TK-10003-AGD</ticketNumber>
+        <age>27</age>
+        <nationality>Maroc</nationality>
+        <ticketType>PREMIUM</ticketType>
+        <seatLocation>
+            <tribune>Sud</tribune>
+            <bloc>D</bloc>
+            <rang>1</rang>
+            <siege>8</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10004</spectatorId>
+        <matchId>MCH02</matchId>
+        <entryTime>2025-07-06T18:55:10</entryTime>
+        <gate>Gate B2</gate>
+        <ticketNumber>TK-10004-AGD</ticketNumber>
+        <age>19</age>
+        <nationality>Côte d'Ivoire</nationality>
+        <ticketType>STANDARD</ticketType>
+        <seatLocation>
+            <tribune>Est</tribune>
+            <bloc>B</bloc>
+            <rang>6</rang>
+            <siege>22</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10005</spectatorId>
+        <matchId>MCH03</matchId>
+        <entryTime>2025-07-07T16:55:42</entryTime>
+        <gate>Gate A3</gate>
+        <ticketNumber>TK-10005-AGD</ticketNumber>
+        <age>34</age>
+        <nationality>Maroc</nationality>
+        <ticketType>VIP</ticketType>
+        <seatLocation>
+            <tribune>Est</tribune>
+            <bloc>C</bloc>
+            <rang>4</rang>
+            <siege>12</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10006</spectatorId>
+        <matchId>MCH03</matchId>
+        <entryTime>2025-07-07T17:10:11</entryTime>
+        <gate>Gate A4</gate>
+        <ticketNumber>TK-10006-AGD</ticketNumber>
+        <age>28</age>
+        <nationality>Mali</nationality>
+        <ticketType>STANDARD</ticketType>
+        <seatLocation>
+            <tribune>Nord</tribune>
+            <bloc>A</bloc>
+            <rang>2</rang>
+            <siege>10</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10007</spectatorId>
+        <matchId>MCH04</matchId>
+        <entryTime>2025-07-08T18:12:33</entryTime>
+        <gate>Gate C1</gate>
+        <ticketNumber>TK-10007-AGD</ticketNumber>
+        <age>40</age>
+        <nationality>Égypte</nationality>
+        <ticketType>LOGE</ticketType>
+        <seatLocation>
+            <tribune>Ouest</tribune>
+            <bloc>F</bloc>
+            <rang>7</rang>
+            <siege>5</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10008</spectatorId>
+        <matchId>MCH04</matchId>
+        <entryTime>2025-07-08T18:25:00</entryTime>
+        <gate>Gate C2</gate>
+        <ticketNumber>TK-10008-AGD</ticketNumber>
+        <age>21</age>
+        <nationality>Maroc</nationality>
+        <ticketType>STANDARD</ticketType>
+        <seatLocation>
+            <tribune>Est</tribune>
+            <bloc>A</bloc>
+            <rang>10</rang>
+            <siege>30</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10009</spectatorId>
+        <matchId>MCH05</matchId>
+        <entryTime>2025-07-09T17:00:15</entryTime>
+        <gate>Gate D1</gate>
+        <ticketNumber>TK-10009-AGD</ticketNumber>
+        <age>33</age>
+        <nationality>Tunisie</nationality>
+        <ticketType>PREMIUM</ticketType>
+        <seatLocation>
+            <tribune>Sud</tribune>
+            <bloc>D</bloc>
+            <rang>5</rang>
+            <siege>19</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10010</spectatorId>
+        <matchId>MCH05</matchId>
+        <entryTime>2025-07-09T17:16:00</entryTime>
+        <gate>Gate D2</gate>
+        <ticketNumber>TK-10010-AGD</ticketNumber>
+        <age>25</age>
+        <nationality>Maroc</nationality>
+        <ticketType>VIP</ticketType>
+        <seatLocation>
+            <tribune>Nord</tribune>
+            <bloc>B</bloc>
+            <rang>1</rang>
+            <siege>2</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10011</spectatorId>
+        <matchId>MCH06</matchId>
+        <entryTime>2025-07-10T18:10:45</entryTime>
+        <gate>Gate E1</gate>
+        <ticketNumber>TK-10011-AGD</ticketNumber>
+        <age>29</age>
+        <nationality>Nigeria</nationality>
+        <ticketType>MEDIA</ticketType>
+        <seatLocation>
+            <tribune>Ouest</tribune>
+            <bloc>E</bloc>
+            <rang>3</rang>
+            <siege>9</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10012</spectatorId>
+        <matchId>MCH06</matchId>
+        <entryTime>2025-07-10T18:22:14</entryTime>
+        <gate>Gate E2</gate>
+        <ticketNumber>TK-10012-AGD</ticketNumber>
+        <age>32</age>
+        <nationality>Maroc</nationality>
+        <ticketType>INVITATION</ticketType>
+        <seatLocation>
+            <tribune>Est</tribune>
+            <bloc>G</bloc>
+            <rang>15</rang>
+            <siege>1</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10013</spectatorId>
+        <matchId>MCH07</matchId>
+        <entryTime>2025-07-11T17:35:01</entryTime>
+        <gate>Gate F1</gate>
+        <ticketNumber>TK-10013-AGD</ticketNumber>
+        <age>41</age>
+        <nationality>Cameroun</nationality>
+        <ticketType>VIP</ticketType>
+        <seatLocation>
+            <tribune>Sud</tribune>
+            <bloc>A</bloc>
+            <rang>2</rang>
+            <siege>17</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10014</spectatorId>
+        <matchId>MCH07</matchId>
+        <entryTime>2025-07-11T17:50:30</entryTime>
+        <gate>Gate F2</gate>
+        <ticketNumber>TK-10014-AGD</ticketNumber>
+        <age>24</age>
+        <nationality>Maroc</nationality>
+        <ticketType>STANDARD</ticketType>
+        <seatLocation>
+            <tribune>Est</tribune>
+            <bloc>C</bloc>
+            <rang>11</rang>
+            <siege>23</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10015</spectatorId>
+        <matchId>MCH08</matchId>
+        <entryTime>2025-07-12T18:05:40</entryTime>
+        <gate>Gate G1</gate>
+        <ticketNumber>TK-10015-AGD</ticketNumber>
+        <age>36</age>
+        <nationality>Afrique du Sud</nationality>
+        <ticketType>PREMIUM</ticketType>
+        <seatLocation>
+            <tribune>Nord</tribune>
+            <bloc>H</bloc>
+            <rang>6</rang>
+            <siege>14</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10016</spectatorId>
+        <matchId>MCH08</matchId>
+        <entryTime>2025-07-12T18:15:22</entryTime>
+        <gate>Gate G2</gate>
+        <ticketNumber>TK-10016-AGD</ticketNumber>
+        <age>29</age>
+        <nationality>France</nationality>
+        <ticketType>MEDIA</ticketType>
+        <seatLocation>
+            <tribune>Presse</tribune>
+            <bloc>P1</bloc>
+            <rang>1</rang>
+            <siege>5</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10017</spectatorId>
+        <matchId>MCH09</matchId>
+        <entryTime>2025-07-13T19:00:00</entryTime>
+        <gate>Gate H1</gate>
+        <ticketNumber>TK-10017-AGD</ticketNumber>
+        <age>55</age>
+        <nationality>Arabie Saoudite</nationality>
+        <ticketType>LOGE</ticketType>
+        <seatLocation>
+            <tribune>VIP</tribune>
+            <bloc>V1</bloc>
+            <rang>1</rang>
+            <siege>1</siege>
+        </seatLocation>
+    </spectatorEntry>
+
+    <spectatorEntry>
+        <spectatorId>SPX10005</spectatorId>
+        <matchId>MCH09</matchId>
+        <entryTime>2025-07-13T19:10:05</entryTime>
+        <gate>Gate H2</gate>
+        <ticketNumber>TK-10018-AGD</ticketNumber>
+        <age>34</age>
+        <nationality>Maroc</nationality>
+        <ticketType>VIP</ticketType>
+        <seatLocation>
+            <tribune>Est</tribune>
+            <bloc>C</bloc>
+            <rang>4</rang>
+            <siege>12</siege>
+        </seatLocation>
+    </spectatorEntry>
+</spectators>
