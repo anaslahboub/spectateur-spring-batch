@@ -1,5 +1,6 @@
 package org.match.batch;
 
+import lombok.extern.slf4j.Slf4j;
 import org.match.models.EntrySpectateurDto;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.infrastructure.item.xml.StaxEventItemReader;
@@ -8,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
-
+@Slf4j
 @Configuration
 public class SpectateurXmlReader {
 
@@ -23,6 +24,8 @@ public class SpectateurXmlReader {
     @Bean
     @StepScope
     public StaxEventItemReader<EntrySpectateurDto> reader() {
+        log.info("📖 Configuration du reader XML pour spectateurs");
+
         Jaxb2Marshaller unmarshaller = new Jaxb2Marshaller();
         // Indiquer la classe à mapper
         unmarshaller.setClassesToBeBound(EntrySpectateurDto.class);

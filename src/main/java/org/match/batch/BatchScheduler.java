@@ -1,6 +1,7 @@
 package org.match.batch;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.job.Job;
 import org.springframework.batch.core.job.parameters.JobParameters;
 import org.springframework.batch.core.job.parameters.JobParametersBuilder;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
 
 @Component
+@Slf4j
 public class BatchScheduler {
 
     private final JobLauncher jobLauncher;
@@ -21,26 +23,22 @@ public class BatchScheduler {
         this.spectateurJob = spectateurJob;
     }
 
-    /**
-     * Lance le batch toutes les 15 secondes
-     * fixedDelay = attend 15s après la fin de l'exécution précédente
-     * fixedRate = lance toutes les 15s (même si le précédent n'est pas terminé)
-     */
-    @Scheduled(fixedDelay = 600_000) // 15000 ms = 15 secondes
+
+    @Scheduled(fixedDelay = 600_000)
     public void launchBatchJob() {
         try {
+                log.info("🚀 Démarrage de l'exécution du batch - ID: {}", System.currentTimeMillis());
             JobParameters jobParameters = new JobParametersBuilder()
-                    .addLong("run.id", System.currentTimeMillis())   // UNIQUE
+                    .addLong("run.id", System.currentTimeMillis())
                     .toJobParameters();
-
-            System.out.println("🚀 Lancement du batch à : " + LocalDateTime.now());
 
             jobLauncher.run(spectateurJob, jobParameters);
 
-            System.out.println("✅ Batch terminé avec succès");
+            log.info("✅ Batch terminé avec succès");
 
         } catch (Exception e) {
-            System.err.println("❌ Erreur lors de l'exécution du batch : " + e.getMessage());
+
+            log.error("❌ Erreur lors de l'exécution du batch - ID: {}", System.currentTimeMillis(), e);
             e.printStackTrace();
         }
     }

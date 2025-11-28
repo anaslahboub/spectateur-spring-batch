@@ -2,23 +2,31 @@ package org.match.models;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "statistics")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
-public class Statistic {
+@Entity
+public class Statistics {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "stat_key", nullable = false)
-    private String key; // Ex: "TOTAL_SPECTATEURS", "TOP_NATIONALITE_MAROC"
+    @Enumerated(EnumType.STRING)
+    @Column(name = "stat_type", nullable = false)
+    private StatisticType statisticType;
+
+    @Column(name = "stat_key")
+    private String key;
 
     @Column(name = "stat_value")
-    private String value; // Ex: "15000", "45%"
+    private Double value;
+
+    private String unit;
+
+    private String description;
+
+    private String matchId;
 
     private LocalDateTime calculatedAt;
 }

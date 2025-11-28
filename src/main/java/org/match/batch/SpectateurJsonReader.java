@@ -1,5 +1,8 @@
 package org.match.batch;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import lombok.extern.slf4j.Slf4j;
 import org.match.models.EntrySpectateurDto;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.infrastructure.item.ItemReader;
@@ -10,45 +13,51 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import tools.jackson.databind.json.JsonMapper;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 @Configuration
-public class SpectateurJsonReader  {
+@Slf4j
+public class SpectateurJsonReader implements ItemReader<EntrySpectateurDto>  {
 
     /**
      * The @StepScope annotation ensures that the ItemReader bean is instantiated and managed within the scope of a step. This allows for dynamic parameters or configurations to be injected into the reader.
      * JsonItemReaderBuilder: Configures the reader to read Spectateur objects from the spectateur.json file using Jackson for JSON parsing.
      * @return SpectateurDto
      */
-    @Bean
-    @StepScope
-    public ItemReader<EntrySpectateurDto> jsonItemReader() {
-        return new JsonArrayItemReader("input/spectateurs.json");
+    private Iterator<EntrySpectateurDto> iterator;
+
+
+
+    @Override
+    public EntrySpectateurDto read() throws Exception {
+        if (iterator == null) {
+            iterator = loadJsonArray();
+        }
+        return iterator.hasNext() ? iterator.next() : null;
     }
 
-//    @Bean
-//    @StepScope
-//    public JsonItemReader<EntrySpectateurDto> jsonItemReader() {
-//
-////        JsonMapper jsonMapper = JsonMapper.builder()
-////                .findAndAddModules() // gère LocalDate, LocalDateTime…  // Important : validation stricte
-////                .build();
-////        JacksonJsonObjectReader<EntrySpectateurDto> jsonObjectReader = new JacksonJsonObjectReader<>(EntrySpectateurDto.class);
-////
-////        jsonObjectReader.setMapper(jsonMapper);
-////
-////        return new JsonItemReaderBuilder<EntrySpectateurDto>()
-////                .name("SpectateurJsonReader")
-////                .resource(new ClassPathResource("input/spectateurs.json.json"))
-////                .jsonObjectReader(jsonObjectReader)
-////                .build();
-//
-//        /**
-//         * Bean pour lire un tableau JSON
-//         * Utilise le JsonArrayItemReader personnalisé
-//         * @return ItemReader pour EntrySpectateurDto
-//         */
-//
-//    }
+    private Iterator<EntrySpectateurDto> loadJsonArray() throws IOException {
+        log.info("📖 Chargement du fichier JSON: input/spectateurs.json");
 
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.registerModule(new JavaTimeModule());
+
+        ClassPathResource resource = new ClassPathResource("input/spectateurs.json");
+        EntrySpectateurDto[] array = mapper.readValue(resource.getInputStream(), EntrySpectateurDto[].class);
+
+        List<EntrySpectateurDto> items = new ArrayList<>();
+        for (EntrySpectateurDto item : array) {
+            items.add(item);
+        }
+
+        log.info("✅ {} spectateurs chargés depuis le JSON", items.size());
+
+        return items.iterator();
+    }
 
     /**
      * Sans @StepScope, ton reader est créé comme un bean singleton au démarrage de l’application.

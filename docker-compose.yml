@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_batch
+    environment:
+      POSTGRES_DB: spec_db
+      POSTGRES_USER: spec_user
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+  pgadmin:
+    image: dpage/pgadmin4:8.5
+    container_name: pgadmin_batch
+    environment:
+      PGADMIN_DEFAULT_EMAIL: anas.lahboub@edu.uiz.ac.ma
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8081:80"
+    depends_on:
+      - postgres
+    restart: always
+
+volumes:
+  postgres_data:
+

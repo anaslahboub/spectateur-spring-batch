@@ -1,0 +1,81 @@
+2025-11-28 17:40:47 INFO  org.springframework.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-28 17:40:47 INFO  org.springframework.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-28 17:40:47 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28 17:40:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-28 17:40:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-28 18:18:34 INFO  org.match.ProjectSpringbatchApplication - Starting ProjectSpringbatchApplication using Java 21.0.9 with PID 19117 (/media/lahboub/D1/projects/project-springbatch/target/classes started by lahboub in /media/lahboub/D1/projects/project-springbatch)
+2025-11-28 18:18:34 INFO  org.match.ProjectSpringbatchApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-28 18:18:36 INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-28 18:18:36 INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-11-28 18:18:36 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.match.repository.EntrySpectateurRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-11-28 18:18:36 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.match.repository.SpectateurRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-11-28 18:18:36 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.match.repository.StatisticsRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-11-28 18:18:36 INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 0 JDBC repository interfaces.
+2025-11-28 18:18:36 INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-28 18:18:36 INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-28 18:18:36 INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 116 ms. Found 3 JPA repository interfaces.
+2025-11-28 18:18:37 INFO  org.springframework.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-28 18:18:37 INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-28 18:18:37 INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-28 18:18:37 INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-11-28 18:18:37 INFO  o.s.b.w.c.servlet.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3211 ms
+2025-11-28 18:18:38 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-28 18:18:38 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-11-28 18:18:39 INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-28 18:18:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-28 18:18:39 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@33b2ba25
+2025-11-28 18:18:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-28 18:18:39 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-28 18:18:39 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/spec_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.15
+	Default catalog/schema: spec_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-28 18:18:41 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-28 18:18:41 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28 18:18:41 INFO  o.s.d.jpa.repository.query.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-28 18:18:42 INFO  org.match.batch.SpectateurWritter - 📝 Configuration du JpaItemWriter pour EntrySpectateur
+2025-11-28 18:18:42 INFO  org.match.batch.BatchConfig - 🔧 Configuration du step JSON avec chunk size: 10
+2025-11-28 18:18:43 INFO  org.match.batch.BatchConfig - 🔧 Configuration du step XML avec chunk size: 4
+2025-11-28 18:18:43 INFO  org.match.batch.BatchConfig - 🔧 Configuration du step de statistiques (tasklet)
+2025-11-28 18:18:43 INFO  org.match.batch.BatchConfig - 🚀 Configuration du Job Batch avec l'ordre: XML → JSON → Statistiques
+2025-11-28 18:18:43 INFO  org.match.batch.BatchConfig - 📋 Détails du job:
+2025-11-28 18:18:43 INFO  org.match.batch.BatchConfig -    - Step 1: XML (chunk: 4)
+2025-11-28 18:18:43 INFO  org.match.batch.BatchConfig -    - Step 2: JSON (chunk: 10)
+2025-11-28 18:18:43 INFO  org.match.batch.BatchConfig -    - Step 3: Statistiques (tasklet)
+2025-11-28 18:18:43 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-28 18:18:44 INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-11-28 18:18:44 INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-28 18:18:44 INFO  org.springframework.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-28 18:18:44 INFO  org.match.ProjectSpringbatchApplication - Started ProjectSpringbatchApplication in 11.016 seconds (process running for 12.201)
+2025-11-28 18:18:44 INFO  org.match.batch.BatchScheduler - 🚀 Démarrage de l'exécution du batch - ID: 1764350324317
+2025-11-28 18:18:44 INFO  o.s.b.core.launch.support.TaskExecutorJobLauncher - Job: [SimpleJob: [name=spectateurJob]] launched with the following parameters: [{JobParameter{name='run.id', value=1764350324319, type=class java.lang.Long, identifying=true}}]
+2025-11-28 18:18:44 INFO  o.springframework.batch.core.job.SimpleStepHandler - Executing step: [xmlStep]
+2025-11-28 18:18:44 INFO  org.match.batch.SpectateurXmlReader - 📖 Configuration du reader XML pour spectateurs
+2025-11-28 18:18:45 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-28 18:18:45 INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-28 18:18:45 INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-11-28 18:18:45 INFO  org.springframework.batch.core.step.AbstractStep - Step: [xmlStep] executed in 731ms
+2025-11-28 18:18:45 INFO  o.springframework.batch.core.job.SimpleStepHandler - Executing step: [jsonStep]
+2025-11-28 18:18:45 INFO  org.match.batch.SpectateurJsonReader - 📖 Chargement du fichier JSON: input/spectateurs.json
+2025-11-28 18:18:45 INFO  org.match.batch.SpectateurJsonReader - ✅ 18 spectateurs chargés depuis le JSON
+2025-11-28 18:18:45 INFO  org.springframework.batch.core.step.AbstractStep - Step: [jsonStep] executed in 278ms
+2025-11-28 18:18:45 INFO  o.springframework.batch.core.job.SimpleStepHandler - Executing step: [statisticsStep]
+2025-11-28 18:18:45 INFO  org.match.service.StatisticsService - 📊 Début du calcul des statistiques dérivées...
+2025-11-28 18:18:45 INFO  org.match.service.StatisticsService - Sauvegarde de 127 statistiques dans la base de données...
+2025-11-28 18:18:45 INFO  org.match.service.StatisticsService - ✅ 127 statistiques calculées et enregistrées avec succès en 401 ms
+2025-11-28 18:18:45 INFO  org.springframework.batch.core.step.AbstractStep - Step: [statisticsStep] executed in 416ms
+2025-11-28 18:18:45 INFO  o.s.b.core.launch.support.TaskExecutorJobLauncher - Job: [SimpleJob: [name=spectateurJob]] completed with the following parameters: [{JobParameter{name='run.id', value=1764350324319, type=class java.lang.Long, identifying=true}}] and the following status: [COMPLETED] in 1s436ms
+2025-11-28 18:18:45 INFO  org.match.batch.BatchScheduler - ✅ Batch terminé avec succès
+2025-11-28 18:19:12 INFO  org.springframework.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-28 18:19:12 INFO  org.springframework.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-28 18:19:12 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-28 18:19:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-28 18:19:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

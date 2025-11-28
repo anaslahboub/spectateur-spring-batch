@@ -1,5 +1,6 @@
 package org.match.batch;
 
+import lombok.extern.slf4j.Slf4j;
 import org.match.factory.EntrySpectateurFactory;
 import org.match.models.*;
 import org.match.repository.SpectateurRepository;
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@Slf4j
 public class SpectateurProcessor implements ItemProcessor<EntrySpectateurDto, EntrySpectateur> {
 
     private final SpectateurValidator validator;
@@ -21,19 +23,20 @@ public class SpectateurProcessor implements ItemProcessor<EntrySpectateurDto, En
 
     @Override
     public EntrySpectateur process(EntrySpectateurDto item) throws Exception {
+        log.debug("🔄 Traitement du spectateur ID: {}", item.getSpectatorId());
 
         validator.validate(item);
 
         EntrySpectateur entrySpectateur = EntrySpectateurFactory.createEntrySpectateur(item);
 
-
         long historique = spectateurRepository.countEntriesBySpectatorId(item.getSpectatorId());
-
         long totalMatchs = historique + 1;
 
         SpectatorCategory category = SpectatorCategory.fromMatchCount(totalMatchs);
-
         entrySpectateur.getSpectateur().setSpectatorCategory(category);
+
+        log.debug("✅ Spectateur ID: {} - Historique: {}, Nouvelle catégorie: {}",
+                item.getSpectatorId(), historique, category);
 
         return entrySpectateur;
     }
