@@ -27,12 +27,11 @@ public class SpectateurXmlReader {
         log.info("📖 Configuration du reader XML pour spectateurs");
 
         Jaxb2Marshaller unmarshaller = new Jaxb2Marshaller();
-        // Indiquer la classe à mapper
         unmarshaller.setClassesToBeBound(EntrySpectateurDto.class);
 
         return new StaxEventItemReaderBuilder<EntrySpectateurDto>()
                 .name("SpectateurXmlReader")
-                .resource(new ClassPathResource("input/spectateurs.xml")) // Attention au chemin
+                .resource(new ClassPathResource("input/spectateurs.xml"))
                 .addFragmentRootElements("spectatorEntry")
                 .unmarshaller(unmarshaller)
                 .build();

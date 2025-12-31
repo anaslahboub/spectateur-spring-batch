@@ -3,6 +3,7 @@ package org.match.batch;
 import lombok.extern.slf4j.Slf4j;
 import org.match.factory.EntrySpectateurFactory;
 import org.match.models.*;
+import org.match.repository.EntrySpectateurRepository;
 import org.match.repository.SpectateurRepository;
 import org.match.validation.SpectateurValidator;
 import org.springframework.batch.infrastructure.item.ItemProcessor;
@@ -14,11 +15,11 @@ import org.springframework.context.annotation.Configuration;
 public class SpectateurProcessor implements ItemProcessor<EntrySpectateurDto, EntrySpectateur> {
 
     private final SpectateurValidator validator;
-    private final SpectateurRepository  spectateurRepository;
+    private final EntrySpectateurRepository  entrySpectateurRepository;
 
-    public SpectateurProcessor(SpectateurValidator compositeSpectateurValidator, SpectateurRepository spectateurRepository) {
+    public SpectateurProcessor(SpectateurValidator compositeSpectateurValidator, EntrySpectateurRepository entrySpectateurRepository) {
         this.validator = compositeSpectateurValidator;
-        this.spectateurRepository = spectateurRepository;
+        this.entrySpectateurRepository = entrySpectateurRepository;
     }
 
     @Override
@@ -29,7 +30,7 @@ public class SpectateurProcessor implements ItemProcessor<EntrySpectateurDto, En
 
         EntrySpectateur entrySpectateur = EntrySpectateurFactory.createEntrySpectateur(item);
 
-        long historique = spectateurRepository.countEntriesBySpectatorId(item.getSpectatorId());
+        long historique = entrySpectateurRepository.countEntriesBySpectatorId(item.getSpectatorId());
         long totalMatchs = historique + 1;
 
         SpectatorCategory category = SpectatorCategory.fromMatchCount(totalMatchs);
@@ -51,7 +52,8 @@ public class SpectateurProcessor implements ItemProcessor<EntrySpectateurDto, En
  * 1. Pourquoi le Pattern Strategy ? (L'Interface SpectateurValidator)
  * Argument clé : Le Principe Open/Closed (OCP).
  *
- * "J'ai utilisé le pattern Strategy pour respecter le principe Open/Closed. Si demain nous devons ajouter une nouvelle règle (ex: vérifier la nationalité), je peux créer une nouvelle classe NationalityValidator sans modifier le code existant du Processor ni des autres validateurs."
+ * "J'ai utilisé le pattern Strategy pour respecter le principe Open/Closed. Si demain nous devons ajouter une nouvelle règle (ex: vérifier la nationalité),
+ * je peux créer une nouvelle classe NationalityValidator sans modifier le code existant du Processor ni des autres validateurs."
  *
  * Argument secondaire : Single Responsibility (SRP).
  *

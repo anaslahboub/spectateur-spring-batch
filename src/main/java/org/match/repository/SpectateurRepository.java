@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface  SpectateurRepository extends JpaRepository<Spectateur, String> {
-    @Query("SELECT COUNT(s) FROM Spectateur s where s.spectatorId= :spectatorId")
-    long countEntriesBySpectatorId(@Param("spectatorId") String spectatorId);
+
 
 }

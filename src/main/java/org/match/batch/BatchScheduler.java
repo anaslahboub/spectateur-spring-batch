@@ -27,7 +27,7 @@ public class BatchScheduler {
     @Scheduled(fixedDelay = 600_000)
     public void launchBatchJob() {
         try {
-                log.info("🚀 Démarrage de l'exécution du batch - ID: {}", System.currentTimeMillis());
+                log.info("Démarrage de l'exécution du batch - ID: {}", System.currentTimeMillis());
             JobParameters jobParameters = new JobParametersBuilder()
                     .addLong("run.id", System.currentTimeMillis())
                     .toJobParameters();

@@ -42,7 +42,8 @@ public class CompositeSpectateurValidator implements SpectateurValidator {
  *     private TicketValidator ticketValidator;
  *     // Et si vous en ajoutez 10 autres ?
  *     .....
- *     Le problème ici : Le Processor (le client) sait "trop de choses". Il sait combien il y a de règles et lesquelles. Si vous changez les règles, vous devez toucher au code du Processor.
+ *     Le problème ici : Le Processor (le client) sait "trop de choses". Il sait combien il y a de règles et lesquelles.
+ *     Si vous changez les règles, vous devez toucher au code du Processor.(OPEN/CLOSED PRINCIPLLE)
  *
  * 2. La Solution (AVEC Composite)
  * Le Pattern Composite permet de traiter un groupe d'objets (plusieurs validateurs) de la même manière qu'un seul objet.

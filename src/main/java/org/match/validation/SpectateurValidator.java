@@ -10,5 +10,5 @@ public interface SpectateurValidator {
      * @param dto L'objet à valider
      * @throws ValidationException si une règle n'est pas respectée
      */
-    void validate(EntrySpectateurDto dto) throws ValidationException;
+    void    validate(EntrySpectateurDto dto) throws ValidationException;
 }
