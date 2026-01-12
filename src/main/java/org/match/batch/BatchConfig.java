@@ -19,9 +19,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 @Configuration
 @Slf4j
 public class BatchConfig {
-
-
-
         @Autowired
         SpectateurJsonReader jsonItemReader;
 
@@ -38,6 +35,8 @@ public class BatchConfig {
                     .writer(writer)
                     .transactionManager(transactionManager)
                     .faultTolerant()
+                    .retry(ValidationException.class)
+                    .retryLimit(2)
                     .skipLimit(3)
                     .skip(ValidationException.class)
                     .build();

@@ -6,7 +6,7 @@ public enum SpectatorCategory {
     PREMIERE_VISITE("Première visite", 1, 1),
     SPECTATEUR_OCCASIONNEL("Spectateur occasionnel", 2, 3),
     SPECTATEUR_REGULIER("Spectateur régulier", 4, 6),
-        SUPER_FAN("Super fan", 7, Integer.MAX_VALUE);
+    SUPER_FAN("Super fan", 7, Integer.MAX_VALUE);
 
     private final String label;
     private final int minMatches;
